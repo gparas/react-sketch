@@ -13,12 +13,12 @@ const buttonStyle = {
     width: 'auto',
 };
 
-const Button = ({ label, backgroundColor, style }) => (
+const Button = ({ label, color, style }) => (
     <View
         name="Button"
         style={{
             ...buttonStyle,
-            backgroundColor,
+            backgroundColor: color,
             ...style
         }}
     >
@@ -26,7 +26,7 @@ const Button = ({ label, backgroundColor, style }) => (
             name="Label"
             style={{
                 ...typography.Button,
-                color: textColor(backgroundColor)
+                color: textColor(color)
             }}
         >
             {label}
@@ -35,7 +35,7 @@ const Button = ({ label, backgroundColor, style }) => (
 );
 
 Button.defaultProps = {
-    backgroundColor: colors.Brand,
+    color: colors.Brand,
     label: 'Button Text',
 };
 
