@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-sketchapp';
 
-import { colors, fontFamily, fontWeights, typeSizes, typography } from '../designSystem';
+import { colors, fontFamily, fontWeights, typeSizes, typography, spacing } from '../designSystem';
 
 import Section from '../components/Section';
 import Grid from '../components/Grid';
@@ -44,15 +44,30 @@ const Typography = () => (
                 <Text style={typography.Caption}>PRE-DEFINED SIZES</Text>
             </Grid>
             {Object.keys(typeSizes).map(size =>
-                <Grid key={size} name="size" variant="col" col={1.3}>
-                    <Text
+                <Grid
+                    key={size}
+                    name="size"
+                    variant="col"
+                    col={1.5}
+                >
+                    <View
                         style={{
-                            ...typography.Body,
-                            fontSize: typeSizes[size],
+                            paddingBottom: spacing,
+                            marginBottom: spacing,
+                            borderBottomWidth: 1,
+                            borderBottomColor: colors.LightGrey,
                         }}
                     >
-                        Aa
-                    </Text>
+                        <Text
+                            style={{
+                                ...typography.Body,
+                                fontSize: typeSizes[size],
+                                lineHeight: typeSizes[size],
+                            }}
+                        >
+                            Aa
+                        </Text>
+                    </View>
                     <Text style={typography.Caption}>{typeSizes[size]}px</Text>
                 </Grid>
             )}
