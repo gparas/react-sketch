@@ -1,14 +1,13 @@
-import palette from './palette';
 export const defaultFontFamily = 'Open Sans';
 
-export const buildVariant = (fontWeight, size, lineHeight, letterSpacing) => ({
-    color: palette.text.primary,
+export const buildVariant = (fontWeight, size, lineHeight, letterSpacing, textTransform) => ({
     fontFamily: defaultFontFamily,
     fontSize: size,
     fontWeight: fontWeight,
-    lineHeight: lineHeight,
+    lineHeight: lineHeight * size,
     letterSpacing: letterSpacing,
-  });
+    textTransform: textTransform,
+});
 
 
 export default {

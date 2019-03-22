@@ -1,37 +1,69 @@
 import React from 'react';
-import { render, Page, Text } from 'react-sketchapp';
+import { render, Page, Text, Artboard } from 'react-sketchapp';
 import { typography, button } from './designSystem';
+import { capitalize } from '../../helpers';
+import palette from '../../palette';
 import Grid from './Grid';
 
 export default context => {
-    const textAlign = ['left', 'center', 'right'];
+    const colors = {
+        default: palette.text.primary,
+        brand: palette.brand.main,
+        primary: palette.primary.main,
+        textSecondary: palette.text.secondary,
+    };
     render(
         <Page name="typography">
-            <Grid name="Text Style">
-                {textAlign.map(align => (
+            <Artboard
+                name="Typography"
+                style={{
+                    width: 1440,
+                    padding: 72,
+                }}
+            >
+                <Grid name="Text Style">
+                    {Object.keys(colors).map(color => (
+                        <Grid
+                            key={color}
+                            name={`Text ${color}`}
+                            variant="col"
+                        >
+                            {Object.keys(typography).map(variant => (
+                                <Text
+                                    key={variant}
+                                    name={`${variant} / ${color}`}
+                                    style={{
+                                        ...typography[variant],
+                                        color: colors[color],
+                                    }}
+                                >
+                                    {capitalize(variant)}
+                                </Text>
+                            ))}
+                        </Grid>
+                    ))}
                     <Grid
-                        key={align}
-                        name={`Text ${align}`}
+                        name="Text White"
                         variant="col"
+                        style={{
+                            backgroundColor: palette.brand.dark,
+                        }}
                     >
                         {Object.keys(typography).map(variant => (
                             <Text
                                 key={variant}
-                                name={`${variant}/${align}/default`}
+                                name={`${variant} / white`}
                                 style={{
                                     ...typography[variant],
-                                    textAlign: align
+                                    color: '#ffffff',
                                 }}
                             >
-                                {variant}
+                                {capitalize(variant)}
                             </Text>
                         ))}
                     </Grid>
-                ))}
-            </Grid>
-            <Text name="button" style={{...button, textAlign: 'center'}}>
-                {'button'.toUpperCase()}
-            </Text>
+                </Grid>
+            </Artboard>
         </Page>,
         context.document.currentPage(),
     );

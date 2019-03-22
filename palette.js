@@ -49,6 +49,7 @@ const palette = {
     },
     text: {
         primary: '#1C2337',
+        secondary: 'rgba(0, 0, 0, 0.54)',
         contrastText: '#fff',
     },
 };
