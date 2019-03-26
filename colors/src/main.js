@@ -1,4 +1,5 @@
 import React from 'react';
+import chroma from 'chroma-js';
 import { render, Page, Artboard } from 'react-sketchapp';
 import palette from '../../palette';
 import Swatches from './Swatches';
@@ -16,6 +17,7 @@ export default context => {
         warning: palette.warning.main,
         info: palette.info.main,
     };
+    const shadesOfGrey = chroma.scale([palette.text.primary, '#dde2e8']).colors(4);
     render(
         <Page name="colors">
             <Artboard
@@ -27,6 +29,7 @@ export default context => {
             >
                 <Swatches name="Brand Colors" data={brandColors}/>
                 <Swatches name="UI Colors" data={uiColors}/>
+                <Swatches name="Shades of Grey" data={shadesOfGrey}/>
             </Artboard>
         </Page>,
         context.document.currentPage(),

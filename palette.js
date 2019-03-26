@@ -1,3 +1,5 @@
+import chroma from 'chroma-js';
+
 const palette = {
     type: 'light',
     brand: {
@@ -48,8 +50,8 @@ const palette = {
         hoverOpacity: 0.1,
     },
     text: {
-        primary: '#1C2337',
-        secondary: 'rgba(0, 0, 0, 0.54)',
+        primary: '#172B4D',
+        secondary: chroma('#1C2337').alpha(0.5).css(),
         contrastText: '#fff',
     },
 };
