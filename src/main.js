@@ -1,17 +1,14 @@
 import React from 'react';
 import { render, Page } from 'react-sketchapp';
 
-import Colors from './sections/Colors';
-import Typography from './sections/Typography';
-import Buttons from './sections/Buttons';
+import { Colors, Typography } from './Artboards';
 
 
 export default context => {
     render(
         <Page name="Styleguide">
-            <Colors/>
-            <Typography/>
-            <Buttons/>
+            <Colors />
+            <Typography />
         </Page>,
         context.document.currentPage(),
     );

@@ -1,7 +1,6 @@
 import chroma from 'chroma-js';
 
-const palette = {
-    type: 'light',
+export const palette = {
     brand: {
         light: '#0d54c2',
         main: '#173d9a',
@@ -56,4 +55,6 @@ const palette = {
     },
 };
 
-export default palette;
+export default {
+    palette,
+};

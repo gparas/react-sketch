@@ -1,17 +1,19 @@
 import React from 'react';
 import { View } from 'react-sketchapp';
-import { gutter } from '../designSystem';
 
 const gridStyle = {
     row: {
         boxSizing: 'border-box',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        margin: -gutter,
+        margin: -16,
     },
     col: {
         boxSizing: 'border-box',
-        padding: gutter,
+        margin: 16,
+        flexBasis: 0,
+        flexGrow: 1,
+        maxWidth: '100%',
     }
 }
 
@@ -20,7 +22,6 @@ const Grid = ({ name, variant, col, children, style }) => (
         name={name}
         style={{
             ...gridStyle[variant],
-            flexBasis: variant === 'col' ? `${(col/12)*100}%` : '100%',
             ...style,
         }}
     >
@@ -29,7 +30,6 @@ const Grid = ({ name, variant, col, children, style }) => (
 );
 
 Grid.defaultProps = {
-    col: 4,
     variant: 'row',
 };
 

@@ -2,11 +2,10 @@ import React from 'react'
 import chroma from 'chroma-js';
 import { Text, View } from 'react-sketchapp';
 
-import { capitalize } from '../../helpers';
-import palette from '../../palette';
-import { typography } from '../../createTypography';
+import { capitalize } from '../../utils/helpers';
+import { typography } from '../../styles/createTypography';
 
-import Grid from './Grid';
+import Grid from '../../components/Grid';
 
 const Swatches = (props) => {
     const {name, data} = props;
@@ -47,7 +46,6 @@ const Swatches = (props) => {
                         <Text
                             style={{
                                 ...typography.body1,
-                                color: palette.text.secondary,
                                 textTransform: 'uppercase',
                             }}
                         >
@@ -56,7 +54,6 @@ const Swatches = (props) => {
                         <Text
                             style={{
                                 ...typography.body1,
-                                color: palette.text.secondary,
                                 textTransform: 'uppercase',
                             }}
                         >
