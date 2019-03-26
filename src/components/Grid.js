@@ -7,6 +7,7 @@ const gridStyle = {
         flexDirection: 'row',
         flexWrap: 'wrap',
         margin: -16,
+        alignItems: 'center',
     },
     col: {
         boxSizing: 'border-box',
@@ -17,7 +18,7 @@ const gridStyle = {
     }
 }
 
-const Grid = ({ name, variant, col, children, style }) => (
+const Grid = ({ name, variant, children, style }) => (
     <View
         name={name}
         style={{
