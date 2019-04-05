@@ -33,7 +33,7 @@ export const typography = {
     overline: buildVariant(fontWeight.regular, 11, 15, 0.4),
 };
 
-export const button = buildVariant(fontWeight.bold, 14, 1.45, 0, 'uppercase');
+export const button = buildVariant(fontWeight.bold, 14, 24, 0, 'uppercase');
 
 
 export default {

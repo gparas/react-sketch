@@ -19,7 +19,7 @@ const Colors = () => {
             <Swatches name="UI Colors" data={uiColors} />
             <Swatches name="Shades of Grey" data={shadesOfGrey} />
         </Artboard>
-    )
+    );
 }
 
 export default Colors;

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Text, Artboard } from 'react-sketchapp';
 import { typography } from '../../styles/createTypography';
 import { capitalize } from '../../utils/helpers';
@@ -11,6 +11,7 @@ const Typography = () => {
             style={{
                 width: 1440,
                 padding: 72,
+                marginBottom: 144,
             }}
         >
             <Grid name="row" style={{ margin: 0 }}>
