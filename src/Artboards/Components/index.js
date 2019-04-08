@@ -3,7 +3,13 @@ import { makeSymbol, Artboard } from 'react-sketchapp';
 
 import Button from './Button';
 
-const ButtonSymbol = makeSymbol(Button, 'button/blue');
+const ButtonPrimary = () => <Button color="primary" />;
+const ButtonSecondary = () => <Button color="secondary" />;
+const ButtonBrand = () => <Button color="brand" />;
+
+const ButtonPrimarySymbol = makeSymbol(ButtonPrimary, 'button/primary');
+const ButtonSecondarySymbol = makeSymbol(ButtonSecondary, 'button/secondary');
+const ButtonBrandSymbol = makeSymbol(ButtonBrand, 'button/brand');
 
 const Components = () => {
     return (
@@ -15,13 +21,9 @@ const Components = () => {
                 marginBottom: 144,
             }}
         >
-            <ButtonSymbol
-                overrides={{
-                    'Blue Square Text': 'Override Text',
-                }}
-            />
+            <ButtonSecondarySymbol />
         </Artboard>
     );
-}
+};
 
 export default Components;
