@@ -50,7 +50,9 @@ export const palette = {
     },
     text: {
         primary: '#172B4D',
-        secondary: chroma('#1C2337').alpha(0.5).css(),
+        secondary: chroma('#1C2337')
+            .alpha(0.5)
+            .css(),
         contrastText: '#fff',
     },
 };

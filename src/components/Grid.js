@@ -15,8 +15,8 @@ const gridStyle = {
         flexBasis: 0,
         flexGrow: 1,
         maxWidth: '100%',
-    }
-}
+    },
+};
 
 const Grid = ({ name, variant, children, style }) => (
     <View

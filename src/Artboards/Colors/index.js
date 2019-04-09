@@ -20,6 +20,6 @@ const Colors = () => {
             <Swatches name="Shades of Grey" data={shadesOfGrey} />
         </Artboard>
     );
-}
+};
 
 export default Colors;

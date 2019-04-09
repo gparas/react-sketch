@@ -3,7 +3,6 @@ import { render, Page } from 'react-sketchapp';
 
 import { Colors, Typography, Components } from './Artboards';
 
-
 export default context => {
     render(
         <Page name="Styleguide">
@@ -11,6 +10,6 @@ export default context => {
             <Typography />
             <Components />
         </Page>,
-        context.document.currentPage(),
+        context.document.currentPage()
     );
 };

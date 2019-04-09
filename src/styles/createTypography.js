@@ -1,6 +1,12 @@
 const defaultFontFamily = 'Open Sans';
 
-export const buildVariant = (fontWeight, size, lineHeight, letterSpacing, textTransform) => ({
+export const buildVariant = (
+    fontWeight,
+    size,
+    lineHeight,
+    letterSpacing,
+    textTransform
+) => ({
     // color: palette.text.primary,
     fontFamily: defaultFontFamily,
     fontSize: size,
@@ -34,7 +40,6 @@ export const typography = {
 };
 
 export const button = buildVariant(fontWeight.bold, 14, 24, 0, 'uppercase');
-
 
 export default {
     typography,

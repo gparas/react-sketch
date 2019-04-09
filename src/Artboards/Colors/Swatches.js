@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import chroma from 'chroma-js';
 import { Text, View } from 'react-sketchapp';
 
@@ -7,10 +7,10 @@ import { typography } from '../../styles/createTypography';
 
 import Grid from '../../components/Grid';
 
-const Swatches = (props) => {
-    const {name, data} = props;
+const Swatches = props => {
+    const { name, data } = props;
     return (
-        <View style={{padding: 36}}>
+        <View style={{ padding: 36 }}>
             <Text
                 name={name}
                 style={{
@@ -22,11 +22,7 @@ const Swatches = (props) => {
             </Text>
             <Grid name={name}>
                 {Object.keys(data).map(color => (
-                    <Grid
-                        key={color}
-                        name={`Swatche ${color}`}
-                        variant="col"
-                    >
+                    <Grid key={color} name={`Swatche ${color}`} variant="col">
                         <View
                             name={color}
                             style={{
@@ -70,7 +66,7 @@ const Swatches = (props) => {
                 ))}
             </Grid>
         </View>
-    )
-}
+    );
+};
 
-export default Swatches
+export default Swatches;

@@ -13,7 +13,8 @@ const Button = ({ color, variant }) => {
                 paddingVertical: 6,
                 borderRadius: 2,
                 width: 112,
-                backgroundColor: variant === 'contained' ? brandColors[color] : 'white',
+                backgroundColor:
+                    variant === 'contained' ? brandColors[color] : 'white',
                 borderWidth: variant === 'outlined' ? 1 : 0,
                 borderColor: brandColors[color],
                 borderStyle: 'solid',
@@ -25,7 +26,10 @@ const Button = ({ color, variant }) => {
                     button,
                     {
                         textAlign: 'center',
-                        color: variant !== 'contained' ? brandColors[color] : 'white',
+                        color:
+                            variant !== 'contained'
+                                ? brandColors[color]
+                                : 'white',
                     },
                 ]}
             >

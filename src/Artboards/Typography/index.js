@@ -28,7 +28,7 @@ const Typography = () => {
                                 {item}
                             </Text>
                         </Grid>
-                    )
+                    );
                 })}
             </Grid>
             {Object.keys(typography).map(variant => {
@@ -37,17 +37,19 @@ const Typography = () => {
                     size: typography[variant].fontSize,
                     weight: typography[variant].fontWeight,
                     lineHeight: typography[variant].lineHeight,
-                }
+                };
                 return (
                     <Grid name="row" key={variant} style={{ margin: 0 }}>
                         {Object.keys(data).map(value => {
-                            const styles = value === 'name' ? {
-
-                                ...typography[variant]
-                            } : {
-                                    ...typography.subtitle1,
-                                    textAlign: 'center',
-                                };
+                            const styles =
+                                value === 'name'
+                                    ? {
+                                          ...typography[variant],
+                                      }
+                                    : {
+                                          ...typography.subtitle1,
+                                          textAlign: 'center',
+                                      };
                             return (
                                 <Grid name="col" variant="col" key={value}>
                                     <Text
@@ -64,7 +66,7 @@ const Typography = () => {
                 );
             })}
         </Artboard>
-    )
-}
+    );
+};
 
 export default Typography;
