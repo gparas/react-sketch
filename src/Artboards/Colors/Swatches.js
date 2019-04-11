@@ -50,14 +50,6 @@ const Swatches = props => {
                         <Text
                             style={{
                                 ...typography.body1,
-                                textTransform: 'uppercase',
-                            }}
-                        >
-                            {chroma(data[color]).css('hsl')}
-                        </Text>
-                        <Text
-                            style={{
-                                ...typography.body1,
                             }}
                         >
                             {capitalize(data[color])}

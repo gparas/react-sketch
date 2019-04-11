@@ -1,15 +1,7 @@
 import React from 'react';
-import { makeSymbol, Artboard } from 'react-sketchapp';
+import { Artboard } from 'react-sketchapp';
 
-import Button from './Button';
-
-const ButtonPrimary = () => <Button color="primary" />;
-const ButtonSecondary = () => <Button color="secondary" />;
-const ButtonBrand = () => <Button color="brand" />;
-
-const ButtonPrimarySymbol = makeSymbol(ButtonPrimary, 'button/primary');
-const ButtonSecondarySymbol = makeSymbol(ButtonSecondary, 'button/secondary');
-const ButtonBrandSymbol = makeSymbol(ButtonBrand, 'button/brand');
+import Buttons from './Buttons';
 
 const Components = () => {
     return (
@@ -21,7 +13,7 @@ const Components = () => {
                 marginBottom: 144,
             }}
         >
-            <ButtonSecondarySymbol />
+            <Buttons />
         </Artboard>
     );
 };

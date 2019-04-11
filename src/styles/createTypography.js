@@ -1,3 +1,5 @@
+import { shadesOfGrey } from '../colors';
+
 const defaultFontFamily = 'Open Sans';
 
 export const buildVariant = (
@@ -7,7 +9,7 @@ export const buildVariant = (
     letterSpacing,
     textTransform
 ) => ({
-    // color: palette.text.primary,
+    color: shadesOfGrey.dark,
     fontFamily: defaultFontFamily,
     fontSize: size,
     fontWeight: fontWeight,

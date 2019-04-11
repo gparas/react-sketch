@@ -1,11 +1,10 @@
 import React from 'react';
-import chroma from 'chroma-js';
 import { Artboard } from 'react-sketchapp';
-import { brandColors, uiColors, grey } from '../../colors';
+import { brandColors, uiColors, shadesOfGrey } from '../../colors';
 import Swatches from './Swatches';
 
 const Colors = () => {
-    const shadesOfGrey = chroma.scale([grey, '#dde2e8']).colors(4);
+    // const shadesOfGrey = chroma.scale([grey, '#ffffff']).colors(4);
     return (
         <Artboard
             name="Colors"
