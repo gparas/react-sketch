@@ -5,6 +5,7 @@ import { capitalize } from '../../utils/helpers';
 import { typography, fontWeight } from '../../styles/createTypography';
 import { shadesOfGrey } from '../../colors';
 import Button from '../../components/Button';
+import Tabs from '../../components/Tabs';
 
 const variants = {
     contained: ['primary', 'secondary', 'brand'],
@@ -55,6 +56,23 @@ const Buttons = () => {
                     </View>
                 </Fragment>
             ))}
+            <Text
+                style={[
+                    typography.body1,
+                    {
+                        marginBottom: 8,
+                        color: shadesOfGrey.grey,
+                        fontWeight: fontWeight.bold,
+                    },
+                ]}
+            >
+                Tabs
+            </Text>
+            <View style={{ flexDirection: 'row' }}>
+                <Tabs color="secondary" />
+                <Tabs color="default" />
+                <Tabs color="default" />
+            </View>
         </Fragment>
     );
 };

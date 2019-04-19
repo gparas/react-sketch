@@ -8,10 +8,10 @@ import { brandColors, shadesOfGrey } from '../colors';
 const Button = ({ color, variant, disabled, name }) => {
     const styles = StyleSheet.create({
         root: {
-            boxSizing: 'border-box',
-            padding: '6px 16px',
             borderRadius: 3,
             width: 112,
+            // height: 36,/
+            paddingVertical: 6,
         },
         contained: {
             backgroundColor: disabled ? shadesOfGrey.light : brandColors[color],
